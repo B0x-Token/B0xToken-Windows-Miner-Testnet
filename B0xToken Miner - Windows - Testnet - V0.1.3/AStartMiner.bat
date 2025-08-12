@@ -66,3 +66,7 @@ if %errorlevel% EQU 22 (
 )
 
 pause
+timeout /t 2
+pause
+timeout /t 3
+pause
