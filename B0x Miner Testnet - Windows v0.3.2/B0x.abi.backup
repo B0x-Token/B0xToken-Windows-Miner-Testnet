@@ -1,0 +1,654 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "_MAXIMUM_TARGET",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "_BLOCKS_PER_READJUSTMENT",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "mint",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "nftAddresses",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nftNumbers",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nonces",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxNumberOfAnswersInMint",
+        "type": "uint256"
+      }
+    ],
+    "name": "mintNFT",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "nonce",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "ExtraFunds",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address",
+        "name": "MintTo",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "MaxAnswersInOneSubmit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minBlockTimeDifferencePerSolve",
+        "type": "uint256"
+      }
+    ],
+    "name": "mintTokensSameAddress",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "nonce",
+        "type": "uint256"
+      },
+      {
+        "name": "challenge_digest",
+        "type": "bytes32"
+      },
+      {
+        "name": "mintToAddress",
+        "type": "address"
+      }
+    ],
+    "name": "mintToJustABAS",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "mintToAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nonce",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxAnswers",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minPreviousBlockTimeDifference",
+        "type": "uint256"
+      }
+    ],
+    "name": "multi_MintTo",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "NumberOfMintsDone",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "mintToAddress",
+        "type": "address"
+      },
+      {
+        "name": "nonce",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "multiMint_SameAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "mintToAddress",
+        "type": "address"
+      },
+      {
+        "name": "nonce",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "multiMint_SameAddress_EZ",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "mintToAddress",
+        "type": "address"
+      },
+      {
+        "name": "nonce",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "multiMint_SameAddress_EZ_refund",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "MintTo",
+        "type": "address"
+      },
+      {
+        "name": "nonce",
+        "type": "uint256[]"
+      },
+      {
+        "name": "ExtraFunds",
+        "type": "address[]"
+      }
+    ],
+    "name": "mintTokensWithMultiMint_EZ",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getChallengeNumber",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getMultiMintChallengeNumber",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getMiningDifficulty",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getMiningTarget",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getMiningReward",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "rewardAtCurrentTime",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "mintNFTGOBlocksUntil",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "mintNFTGO",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "epochCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "howMuchETH",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blocksFromReadjust",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "blocks",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blocksToReadjust",
+    "outputs": [
+      {
+        "name": "blocks",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "reAdjustsToWhatDifficulty_MaxPain_Target",
+    "outputs": [
+      {
+        "name": "target",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "reAdjustsToWhatDifficulty_MaxPain_Difficulty",
+    "outputs": [
+      {
+        "name": "difficulty",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "getLastMintedSolveAtTime",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getNumberOfSeconds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "seconds_Until_adjustmentSwitch",
+    "outputs": [
+      {
+        "name": "secs",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "compensation",
+        "type": "uint256"
+      }
+    ],
+    "name": "TotalTotal_EK_ETHyouGet_EthyouSpend",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "EKYouGet",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ETHYouGet",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ETHyouSpend",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "compensation",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "choice",
+        "type": "uint256"
+      }
+    ],
+    "name": "TotalTotal_EK_ETHyouGet_EthyouSpend_miner",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "valueUGet",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "compensation",
+        "type": "uint256"
+      }
+    ],
+    "name": "TotalTotalsAndETHpriceAndCurrentMintTime",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "B0xYouGet",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ETHYouGet",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ETHyouSpend",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ETHPrice",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "secondsFromPreviousMintreturn",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "reward_amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "epochCount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "newChallengeNumber",
+        "type": "bytes32"
+      }
+    ],
+    "name": "Mint",
+    "type": "event"
+  },
+  {
+  "inputs": [],
+  "name": "getBlockInfo",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "slowBlockz",
+      "type": "uint256"
+    },
+    {
+      "internalType": "uint256",
+      "name": "secondsUntilAdjustmentz",
+      "type": "uint256"
+    },
+    {
+      "internalType": "uint256",
+      "name": "blocksFromReadjustz",
+      "type": "uint256"
+    },
+    {
+      "internalType": "uint256",
+      "name": "blocksToReadjustz",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+}
+]
